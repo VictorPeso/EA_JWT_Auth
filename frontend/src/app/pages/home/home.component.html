@@ -1,52 +1,37 @@
-<div class="home-container">
-  <div class="home-card">
-    <div class="home-header">
-      <h1 class="home-title">¡Bienvenido!</h1>
-      <p class="home-subtitle">Has iniciado sesión correctamente</p>
-    </div>
+<div>
+  <h2>Inicio</h2>
+  <p>Has iniciado sesión correctamente</p>
 
-    <div class="token-section">
-      <h2>Tu Token JWT</h2>
-      <div class="token-box" title="Token JWT activo">
-        <span class="token-label">Bearer</span>
-        <code class="token-value">{{ tokenPreview }}</code>
-      </div>
-      <p class="token-note">
-        El token se adjunta automáticamente en cada petición HTTP gracias al <strong>interceptor</strong>.
-      </p>
-    </div>
-
-    <div class="usuarios-section" style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #334155;">
-      <h2>Prueba de Token: Lista de Usuarios</h2>
-      <p class="token-note" style="margin-bottom: 12px; margin-top: 6px;">
-        Esta petición enviará el token oculto en las cabeceras.
-      </p>
-
-      <div style="display: flex; gap: 12px; margin-bottom: 16px;">
-        <button class="btn btn-primary" (click)="cargarUsuarios()" [disabled]="loadingUsuarios">
-          <span *ngIf="loadingUsuarios">Cargando...</span>
-          <span *ngIf="!loadingUsuarios">Cargar Lista de Usuarios</span>
-        </button>
-
-        <button class="btn btn-secondary" (click)="refreshToken()" style="background-color: #4f46e5; color: white;">
-          Refrescar Token
-        </button>
-      </div>
-
-      <div *ngIf="errorUsuarios" class="alert alert-error">
-        {{ errorUsuarios }}
-      </div>
-
-      <div *ngIf="usuarios.length > 0" class="usuarios-list">
-        <div *ngFor="let u of usuarios" style="background: #0f172a; padding: 12px; margin-bottom: 8px; border-radius: 8px; border: 1px solid #334155;">
-          <p style="margin: 0; font-weight: 600; color: #f8fafc;">{{ u.name }}</p>
-          <p style="margin: 0; font-size: 0.85rem; color: #a5b4fc;">{{ u.email }}</p>
-        </div>
-      </div>
-    </div>
-
-    <button class="btn btn-logout" (click)="logout()">
-      Cerrar Sesión
-    </button>
+  <div style="margin: 20px 0;">
+    <h3>Tu Token JWT</h3>
+    <code style="display:block; padding:10px; background:#eee; word-break:break-all;">
+      {{ tokenPreview }}
+    </code>
   </div>
+
+  <div style="margin: 20px 0;">
+    <h3>Prueba de Token: Lista de Usuarios</h3>
+    <button class="btn" (click)="cargarUsuarios()" [disabled]="loadingUsuarios" style="margin-right: 10px;">
+      <span *ngIf="loadingUsuarios">Cargando...</span>
+      <span *ngIf="!loadingUsuarios">Cargar Lista de Usuarios</span>
+    </button>
+    <button class="btn" (click)="refreshToken()">
+      Refrescar Token
+    </button>
+
+    <div *ngIf="errorUsuarios" class="alert" style="margin-top: 10px;">
+      {{ errorUsuarios }}
+    </div>
+
+    <ul *ngIf="usuarios.length > 0" class="list" style="margin-top: 15px;">
+      <li *ngFor="let u of usuarios" class="card" style="flex-direction: row; justify-content: start; gap:10px;">
+        <span class="name">{{ u.name }}</span>
+        <span class="muted">{{ u.email }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <button class="btn" (click)="logout()">
+    Cerrar Sesión
+  </button>
 </div>
