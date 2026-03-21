@@ -1,6 +1,6 @@
 # Seminario 7 EA — JWT (Arquitectura Profesional)
 
-¡Bienvenido al **Seminario 7 de Entornos de Aplicaciones (EA)**! Este proyecto demuestra una implementación avanzada y segura de autenticación mediante **JWT (JSON Web Tokens)** utilizando una arquitectura de **Access y Refresh Tokens**, ahora refactorizada siguiendo principios de diseño profesional (Separación de responsabilidades y Configuración Centralizada).
+¡Bienvenido al **Seminario 7 de Enginyeria d'Aplicacions (EA)**! Este proyecto demuestra una implementación avanzada y segura de autenticación mediante **JWT (JSON Web Tokens)** utilizando una arquitectura de **Access y Refresh Tokens**, ahora refactorizada siguiendo principios de diseño profesional (Separación de responsabilidades y Configuración Centralizada).
 
 > **IMPORTANTE: Web Sockets**
 > El código de **Web Sockets** se encuentra en un repositorio independiente para mantener la limpieza arquitectónica: [EA_Sem7_Socket](https://github.com/JairoLopezCarbo/EA_Sem7_Socket.git)
