@@ -23,17 +23,22 @@ const router = express.Router();
  *           example: "65f1c2a1b2c3d4e5f6789012"
  *         name:
  *           type: string
- *           example: "Judit"
+ *           example: "User X"
  *         email:
  *           type: string
- *           example: "judit@gmail.com"
+ *           example: "uX@gmail.com"
  *         password:
  *           type: string
- *           example: "password123"
+ *           example: "123456"
  *         organizacion:
  *           type: string
  *           description: ObjectId de la organización
  *           example: "65f1c2a1b2c3d4e5f6789013"
+ *         rol:
+ *           type: string
+ *           enum: [admin, commoner]
+ *           default: commoner
+ *           example: "commoner"
  *     UsuarioCreateUpdate:
  *       type: object
  *       required:
@@ -41,20 +46,26 @@ const router = express.Router();
  *         - organizacion
  *         - email
  *         - password
+ *         - rol
  *       properties:
  *         name:
  *           type: string
- *           example: "Judit"
+ *           example: "User X"
  *         email:
  *           type: string
- *           example: "judit@gmail.com"
+ *           example: "uX@gmail.com"
  *         password:
  *           type: string
- *           example: "password123"
+ *           example: "123456"
  *         organizacion:
  *           type: string
  *           description: ObjectId de la organización (24 hex)
  *           example: "65f1c2a1b2c3d4e5f6789013"
+ *         rol:
+ *           type: string
+ *           enum: [admin, commoner]
+ *           default: commoner
+ *           example: "commoner"
  */
 
 /**

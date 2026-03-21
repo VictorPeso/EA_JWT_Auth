@@ -28,7 +28,8 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
                 _id: usuario._id,
                 name: usuario.name,
                 email: usuario.email,
-                organizacion: usuario.organizacion
+                organizacion: usuario.organizacion,
+                rol: usuario.rol
             }
         });
     } catch (error) {

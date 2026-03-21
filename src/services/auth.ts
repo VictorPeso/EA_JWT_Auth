@@ -18,13 +18,15 @@ export const getTokens = (usuario: any) => {
         String(usuario._id),
         usuario.name,
         usuario.email,
-        usuario.organizacion as mongoose.Types.ObjectId
+        usuario.organizacion as mongoose.Types.ObjectId,
+        usuario.rol
     );
     const refreshToken = generateRefreshToken(
         String(usuario._id),
         usuario.name,
         usuario.email,
-        usuario.organizacion as mongoose.Types.ObjectId
+        usuario.organizacion as mongoose.Types.ObjectId,
+        usuario.rol
     );
 
     return { accessToken, refreshToken };
