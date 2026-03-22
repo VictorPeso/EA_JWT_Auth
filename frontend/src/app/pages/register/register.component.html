@@ -36,6 +36,15 @@
       placeholder="ID de Organización (ObjectId)"
     />
 
+    <input
+      type="text"
+      name="rol"
+      [(ngModel)]="payload.rol"
+      required
+      pattern="^(admin|commoner)$"
+      placeholder="Rol (admin o commoner)"
+    />
+
     <div *ngIf="errorMessage" class="alert">
       {{ errorMessage }}
     </div>

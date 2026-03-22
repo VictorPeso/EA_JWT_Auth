@@ -8,6 +8,7 @@ export interface RegisterPayload {
   email: string;
   password: string;
   organizacion: string;
+  rol: 'admin' | 'commoner';
 }
 
 export interface LoginPayload {
@@ -23,6 +24,7 @@ export interface LoginResponse {
     name: string;
     email: string;
     organizacion: string;
+    rol: 'admin' | 'commoner';
   };
 }
 
@@ -31,6 +33,7 @@ export interface Usuario {
   name: string;
   email: string;
   organizacion: any;
+  rol: 'admin' | 'commoner';
 }
 
 const TOKEN_KEY = 'jwt_token';

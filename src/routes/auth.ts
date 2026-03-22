@@ -32,10 +32,10 @@ const loginSchema = Joi.object({
  *             properties:
  *               email:
  *                 type: string
- *                 example: "omar@gmail.com"
+ *                 example: "uX@gmail.com"
  *               password:
  *                 type: string
- *                 example: "secret123"
+ *                 example: "123456"
  *     responses:
  *       200:
  *         description: Login exitoso, devuelve token

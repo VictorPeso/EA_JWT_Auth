@@ -25,6 +25,12 @@ export const authenticateToken = (
   try {
     const decoded = verifyAccessToken(token); // Verifica el access token
     req.user = decoded;
+
+    // Si el rol del usuario no es admin, retorna un error 403 (Forbidden)
+    if (req.user.rol !== 'admin') {
+      return res.status(401).json({ message: "Acceso denegado" });
+    }
+
     next(); // Si todo esta bien, pasa a la siguiente ruta
   } catch (err: any) {
     if (err instanceof jwt.TokenExpiredError) {

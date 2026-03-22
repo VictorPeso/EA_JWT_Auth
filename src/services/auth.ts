@@ -6,6 +6,7 @@ import { generateAccessToken, generateRefreshToken, verifyRefreshToken } from '.
 export const validateUserCredentials = async (email: string, password: string) => {
     const usuario = await Usuario.findOne({ email });
     if (!usuario) return null;
+    // if (usuario.rol !== 'admin') return null;
 
     const isMatch = await bcrypt.compare(password, usuario.password);
     if (!isMatch) return null;
