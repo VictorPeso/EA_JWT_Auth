@@ -1,3 +1,30 @@
+# Modificaciones del codigo original
+
+Se ha preparado un video donde se explican y listan todas las modificaciónes realizadas para cumplir con el objetivo buscado. Puedes verlo en YouTube:
+
+[![Video explicativo del proyecto](https://img.youtube.com/vi/zJ4Gy0wUzPw/0.jpg)](https://youtu.be/zJ4Gy0wUzPw)
+
+## Uso de IA
+
+Con el fin de entender al máximo el funcionamiento de JWT he priorizado usar el minimo de IA posible. Limitando su uso a los dos casos contretos:
+
+1. **Autocompletado**: Uso del autocompletado de Visual Studio Code con el fin de escribir mas rápido o para saber bien bien como se introduce ciertos formatos de datos (p.e. el enum dentro del modelo).
+2. **Lectura de logs**: Explicaciones más detalladas y claras sobre algunos log de errores obtenidos.
+
+El uso de IA ha sido evitado para cualquier otra situación.
+
+## Preguntes de reflexió
+
+Què passaria si un usuari canvia el seu rol a "admin" manualment dins del token al navegador? El servidor ho detectaria?
+
+> Un token JWT es genera amb una signatura digital que el protegeix de qualsevol manipulació. Aquesta signatura garanteix la integritat del payload davant de qualsevol intent de modificar-ne els claims, ja que faria que la signatura associada al token JWT deixés de correspondre amb els valors continguts en el mateix payload. Per tant, el servidor podria detectar correctament qualsevol intent de frau.
+
+Per què és millor guardar el rol al token en lloc de consultar la base de dades a cada petició a una ruta protegida?
+
+> Com que tota la informació que necessitem viatja dins del mateix token JWT, ens podem estalviar consultes innecessàries a la base de dades. Això fa que la nostra aplicació sigui més eficient i escalable, ja que redueix la latència, la càrrega del servidor i el nombre d’accessos a la base de dades.
+
+---
+
 # Seminario 7 EA — JWT (Arquitectura Profesional)
 
 ¡Bienvenido al **Seminario 7 de Enginyeria d'Aplicacions (EA)**! Este proyecto demuestra una implementación avanzada y segura de autenticación mediante **JWT (JSON Web Tokens)** utilizando una arquitectura de **Access y Refresh Tokens**, ahora refactorizada siguiendo principios de diseño profesional (Separación de responsabilidades y Configuración Centralizada).
