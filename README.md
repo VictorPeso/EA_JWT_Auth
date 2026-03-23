@@ -4,12 +4,12 @@ Se ha preparado un video donde se explican y listan todas las modificaciónes re
 
 [![Video explicativo del proyecto](https://img.youtube.com/vi/zJ4Gy0wUzPw/0.jpg)](https://youtu.be/zJ4Gy0wUzPw)
 
-## Uso de IA
+## IA Generativa:
 
-Con el fin de entender al máximo el funcionamiento de JWT he priorizado usar el minimo de IA posible. Limitando su uso a los dos casos contretos:
+Con el fin de entender al máximo el funcionamiento de JWT he priorizado usar el minimo de IA Generativa posible. Limitando su uso a los dos casos contretos:
 
-1. **Autocompletado**: Uso del autocompletado de Visual Studio Code con el fin de escribir mas rápido o para saber bien bien como se introduce ciertos formatos de datos (p.e. el enum dentro del modelo).
-2. **Lectura de logs**: Explicaciones más detalladas y claras sobre algunos log de errores obtenidos.
+1. **Autocompletado [GitHub Copilot]**: Uso del autocompletado de Visual Studio Code con el fin de escribir mas rápido o para saber bien bien como se introduce ciertos formatos de datos (p.e. el enum dentro del modelo).
+2. **Lectura de logs [ChatGPT]**: Explicaciones más detalladas y claras sobre algunos log de errores obtenidos.
 
 El uso de IA ha sido evitado para cualquier otra situación.
 
